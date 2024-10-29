@@ -11,9 +11,8 @@ export const getPosts = async () => {
 }
 
 export const getPostBySlug = async (id) => {
+  const { data } = await api.get(`/post?id=eq.${id}`);
+  
+  return data;
+};
 
-    //TODO: BUSCAR UM POST EM ESPECIFICO.
-    //const {data} = await api.get(`/post?id=eq.${id}`)
-
-    return {}
-}
